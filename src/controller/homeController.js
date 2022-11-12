@@ -1,5 +1,6 @@
 import { json } from 'sequelize';
 import db from '../models/index';
+import CRUDservice from '../services/CRUDservice'
 
 let getHomePage = async (req, res) => {
     try {
@@ -13,6 +14,15 @@ let getHomePage = async (req, res) => {
     }
 }
 
+let getCRUD = async (req, res) => {
+    return res.render('crud.ejs')
+}
+
+let postCRUD = async (req, res) => {
+    await CRUDservice.createNewUser(req.body);
+}
 module.exports = {
-    getHomePage: getHomePage,
+    getHomePage,
+    getCRUD,
+    postCRUD,
 }
