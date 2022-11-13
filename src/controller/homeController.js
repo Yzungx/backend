@@ -21,8 +21,16 @@ let getCRUD = async (req, res) => {
 let postCRUD = async (req, res) => {
     await CRUDservice.createNewUser(req.body);
 }
+
+let displayGetCRUD = async (req, res) => {
+    let data = await CRUDservice.getAllUser();
+    return res.render('displayCRUD.ejs', {
+        dataTable: data, //truyen data qua view
+    })
+}
 module.exports = {
     getHomePage,
     getCRUD,
     postCRUD,
+    displayGetCRUD,
 }

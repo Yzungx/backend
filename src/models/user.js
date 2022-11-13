@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     positionId: DataTypes.STRING,
   }, {
     sequelize,
-    modelName: 'User',
+    modelName: 'User', //tham chieu de su dung
   });
   return User;
 };
