@@ -15,6 +15,7 @@ let initWebRoutes = (app) => {
 
     // route for react
     router.post('/api/login', userController.handleLogin);
+    router.get('/api/get-all-users', userController.handleGetAllUser);
     // req=require|res: response
     return app.use("/", router);
 }

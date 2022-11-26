@@ -1,0 +1,1 @@
+raw = true de tra ve du lieu dang raw cho sequelize
