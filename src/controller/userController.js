@@ -28,7 +28,7 @@ let handleLogin = async (req, res) => {
 }
 
 let handleGetAllUser = async (req, res) => {
-    let id = req.body.id; //ALL~find all, id~findone: 2 api trg 1
+    let id = req.query.id; //ALL~find all, id~findone: 2 api trg 1
     let users = await userService.getAlluser(id);
 
     if (!id) {
