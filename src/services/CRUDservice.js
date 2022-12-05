@@ -31,7 +31,7 @@ let hashPassword = (password) => {
         try {
             let hashPassword = await bcrypt.hashSync(password, salt);
             resolve(hashPassword);
-        } catch (error) {
+        } catch (e) {
             reject(e);
         }
     }
